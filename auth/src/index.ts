@@ -4,8 +4,7 @@ import {json} from 'body-parser'
 const app = express();
 app.use(json());
 
-app.get('api/users/me', (req, res) => {
-    console.log("did we receive this?")
+app.get('/api/users/me', (req, res) => {
     return res.send("Hi there!")
 })
 
